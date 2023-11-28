@@ -81,7 +81,7 @@ a {
 
 
 .deco {
-    background-image: url("/pics/shit/luces.gif");
+    background-image: url("pics/shit/luces.gif");
     position: absolute;
     background-repeat: repeat;
     background-size: contain;

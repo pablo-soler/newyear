@@ -80,7 +80,7 @@ document.getElementById('meme-invite').onclick = function () {
   song.playbackRate = 1.1;
   crash.play();
   stopAnimation(); // Detiene la animación
-  this.src = '/pics/sobreabierto.jpg';
+  this.src = 'pics/sobreabierto.jpg';
   this.classList.add('zoom-and-move');
   const centerX = window.innerWidth / 2;
   const centerY = window.innerHeight / 2;
@@ -105,7 +105,7 @@ document.getElementById('meme-invite').onclick = function () {
     const urlParams = new URLSearchParams(window.location.search);
     const name = urlParams.get('n');
     if (name) {
-      document.getElementById('pic').src = '/pics/' + name + '.jpg';
+      document.getElementById('pic').src = 'pics/' + name + '.jpg';
       [...document.getElementsByClassName("name")].forEach((e, i)=>{
           e.innerText = name;
       });
