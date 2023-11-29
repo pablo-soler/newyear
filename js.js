@@ -77,7 +77,6 @@ document.getElementById('meme-invite').onclick = function () {
   var song = document.getElementById('song');
   var crash = document.getElementById('crash');
   song.loop = true;
-  song.playbackRate = 1.1;
   crash.play();
   stopAnimation(); // Detiene la animación
   this.src = 'pics/sobreabierto.jpg';
