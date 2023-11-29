@@ -54,18 +54,6 @@ function stopAnimation() {
   cancelAnimationFrame(animationFrameId);
 }
 
-function playAudio() {
-  // Obtener los elementos de audio
-  var song = document.getElementById('song');
-  var crash = document.getElementById('crash');
-
-  // Configurar el audio 'song' para que se reproduzca en bucle
-  song.loop = true;
-  song.play();
-
-  // Reproducir el audio 'crash' solo una vez
-  crash.play();
-}
 
 document.getElementById("cancel").onclick = function (){
   document.getElementById('song').pause();
@@ -78,6 +66,7 @@ document.getElementById('meme-invite').onclick = function () {
   var crash = document.getElementById('crash');
   song.loop = true;
   crash.play();
+  song.play();
   stopAnimation(); // Detiene la animación
   this.src = 'pics/sobreabierto.jpg';
   this.classList.add('zoom-and-move');
@@ -97,7 +86,6 @@ document.getElementById('meme-invite').onclick = function () {
   this.style.transform = `translate(${translateX}px, ${translateY}px) scale(4)`;
 
   setTimeout(() => {
-    song.play();
     document.getElementById('controls').style.display = 'flex';
     document.getElementById('decos').style.display = '';
     document.getElementById('snowflakes').classList.add('snowflakes');
