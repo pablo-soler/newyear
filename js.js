@@ -103,7 +103,7 @@ document.getElementById('meme-invite').onclick = function () {
     document.getElementById('decos').style.display = '';
     document.getElementById('snowflakes').classList.add('snowflakes');
     const urlParams = new URLSearchParams(window.location.search);
-    const name = urlParams.get('n')
+    let name = urlParams.get('n');
     if (name) {
       name = name.replace(/_/g, " ");
       document.getElementById('pic').src = 'pics/' + name + '.jpg';
